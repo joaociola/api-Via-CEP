@@ -1,0 +1,24 @@
+* {
+    font-family: roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f8fc;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
