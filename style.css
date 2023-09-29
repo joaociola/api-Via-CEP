@@ -1,27 +1,75 @@
 * {
     font-family: roboto, sans-serif;
+}
+
+
+.container {
+    width: 72vw;
+    padding: 1rem 0;
+    background-color: #97b192;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 12rem auto;
+    border-radius: 10px;
+    box-shadow: 14px 27px 37px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 14px 27px 37px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 27px 37px 0px rgba(0,0,0,0.75);
+    border: 1.9px solid #a09898;
 }
 
-body {
-    background-color: #f6f8fc;    
+.titulo h1 {
+    margin: 0.5rem 0;
+    text-align: center;
+    font-family: monospace;
+    background-color: #234732;
+    color: white;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+.titulo p {
+    font-weight: 'Roboto';
+    font-size: larger;
+    font-weight: 500;
+    text-align: justify;
+    margin: 10px 9px;
+    padding: 3px 0;
+    line-height: 22px;
+}
+
+.form-cep {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+
+}
+
+.form-group {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 5px 0;
+    background-color: #7a91762e;
+    justify-content: space-between;
 }
 
-.formulario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.form-group label {
+    margin: 5px 20px;
+    font-weight: bold;
+    font-size: 18px;
 }
+
+.form-group input {
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 0 none;
+    padding: 0 5px;
+    outline: 0;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    padding: 10px;
+}
+

@@ -5,61 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&family=Sansita:wght@700&display=swap" rel="stylesheet">
 
-        <!-- Font Roboto -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&family=Sansita:wght@700&display=swap" rel="stylesheet">
-        <title>Pokedex</title>
-    
-        <!-- Nomalize CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Nomalize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./index.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="formulario">
-            <div class="titulo">
-                <h1>
-                    Informe o CEP
-                </h1>
-                <p>
-                    Digite o CEP e ao sair o campo o endereço será completado. Pode utilizar a tecla TAB após digitar o CEP.
-                </p>
-            </div>
-    
-            <div class="form">
-                <div class="corpo">
+             <div class="titulo">
+                 <h1>
+                     Informe o CEP
+                 </h1>
+                 <p>
+                     Digite o CEP para consultar os dados de endereço.
+                 </p>
+             </div>
+
+            <form action="" method="get" class="form-cep">              
+                <div class="form-group">
                     <label for="cep">CEP:</label>
                     <input type="text" id="cep" name="cep" placeholder="XXXXX-XXX"> 
-        
-                    <!-- onblur é um evento em JavaScript que ocorre quando um elemento HTML perde o foco, ou seja, quando o usuário sai desse elemento após interagir com ele. É usado para executar uma ação ou função quando o foco é movido de um elemento para outro, normalmente após o usuário ter preenchido ou interagido com o elemento. 
-                    
-                    onblur="pesquisarCep(this.value);"
-                    -->
-        
+                </div>
+                <div class="form-group">
                     <label for="rua">Rua:</label>
                     <input type="text" id="rua" name="rua">
-        
+                </div>
+                <div class="form-group">
                     <label for="bairro">Bairro:</label>
                     <input type="text" id="bairro" name="bairro">
-        
+                </div>
+                <div class="form-group">
                     <label for="cidade">Cidade:</label>
                     <input type="text" id="cidade" name="cidade">
-        
+                </div>
+                <div class="form-group">
                     <label for="uf">Estado:</label>
                     <input type="text" id="uf" name="uf">
-        
+                </div>
+                <div class="form-group">
                     <label for="ibge">IBGE:</label>
                     <input type="text" id="ibge" name="ibge">
                 </div>
                 <div class="botoes">
-                    <button type="button" onclick="pesquisarCep()">Pesquisar</button>
-                    <button type="button" onclick="limparFormulario()">Limpar</button>
+                    <!-- <input type="submit" value="Pesquisar!" class="botao-1"/>
+                    <input type="submit" value="Limpar!" class="botao-2"/> -->
+                    <div class="botao">
+                        <button type="button" onclick="pesquisarCep()">Pesquisar</button>
+                    </div>
+                    <div class="botao">
+                        <button type="button" onclick="limparFormulario()">Limpar</button>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </form>
     </div>
     
 </body>
-<script src="./index.js"></script>
+
 </html>
