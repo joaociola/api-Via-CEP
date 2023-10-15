@@ -38,15 +38,15 @@
 }
 
 .form-cep {
-    display: inline-block;
+    display: flex;
     width: 100%;
     height: auto;
-
+    flex-direction: column;
+    gap: 0rem;
 }
 
 .form-group {
     display: flex;
-    padding: 5px 0;
     background-color: #7a91762e;
     justify-content: space-between;
 }
