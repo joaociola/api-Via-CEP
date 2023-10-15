@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Busca CEP</title>
+    <link rel="shortcut icon" href="./img/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTExL3JtNDY3YmF0Y2gyLWxvY2F0aW9uLTAwMS5qcGc.webp" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <!-- Font Roboto -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&family=Sansita:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Nomalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,14 +18,15 @@
 </head>
 <body>
     <div class="container">
-             <div class="titulo">
-                 <h1>
-                     Informe o CEP
-                 </h1>
-                 <p>
-                     Digite o CEP para consultar os dados de endereço.
-                 </p>
-             </div>
+        <div class="container-form">
+            <div class="titulo">
+                <h1>
+                    Informe o CEP
+                </h1>
+                <p>
+                    Digite o CEP para consultar os dados de endereço.
+                </p>
+            </div>
 
             <form action="" method="get" class="form-cep">              
                 <div class="form-group">
@@ -50,19 +53,23 @@
                     <label for="ibge">IBGE:</label>
                     <input type="text" id="ibge" name="ibge">
                 </div>
-                <div class="botoes">
-                    <!-- <input type="submit" value="Pesquisar!" class="botao-1"/>
-                    <input type="submit" value="Limpar!" class="botao-2"/> -->
-                    <div class="botao">
-                        <button type="button" onclick="pesquisarCep()">Pesquisar</button>
-                    </div>
-                    <div class="botao">
-                        <button type="button" onclick="limparFormulario()">Limpar</button>
-                    </div>
-                </div>
             </form>
+            <div class="botoes">
+                <div class="botao-pesquisar">
+                    <button type="button" onclick="pesquisarCep()">Pesquisar</button>
+                </div>
+                <div class="botao-limpar">
+                    <button type="button" onclick="limparFormulario()">Limpar</button>
+                </div>
+            </div>
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="fecharPopup()">&times;</span>
+                    <p id="popup-message">Preencha algum campo.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    
 </body>
 
 </html>

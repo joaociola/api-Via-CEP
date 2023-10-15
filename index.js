@@ -19,6 +19,7 @@ function limparFormulario() {
 }
 
 function preencherCampos(data) {
+    document.getElementById('cep').value = data.cep;
     document.getElementById('rua').value = data.logradouro;
     document.getElementById('bairro').value = data.bairro;
     document.getElementById('cidade').value = data.localidade;
@@ -28,13 +29,15 @@ function preencherCampos(data) {
 
 async function pesquisarCep() {
     const cep = document.getElementById('cep').value.replace(/\D/g, '');
+    const popupMessage = document.getElementById('popup-message');
 
     if (!cep.match(/^\d{8}$/)) {
-        alert("CEP inválido. Digite apenas os 8 dígitos.");
+        popupMessage.textContent = "CEP inválido. Digite apenas os 8 dígitos.";
+        mostrarPopup();
         return;
     }
 
-    const url = 'https://viacep.com.br/ws/' + cep + '/json/';
+    const url = `https://viacep.com.br/ws/${cep}/json`;
 
     try {
         const response = await fetch(url);
@@ -44,14 +47,29 @@ async function pesquisarCep() {
                 preencherCampos(data);
             } else {
                 limparFormulario();
-                alert("CEP não encontrado.");
+                popupMessage.textContent = "CEP não encontrado.";
+                mostrarPopup();
             }
         } else {
             limparFormulario();
-            alert("Erro ao buscar CEP.");
+            popupMessage.textContent = "Erro ao buscar CEP.";
+            mostrarPopup();
         }
     } catch (error) {
         limparFormulario();
         console.error('Erro ao buscar CEP:', error);
+        popupMessage.textContent = "Erro ao buscar CEP.";
+        mostrarPopup();
     }
 }
+
+function mostrarPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+}
+
+function fecharPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'none';
+}
+
