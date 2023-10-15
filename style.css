@@ -93,6 +93,11 @@
     text-align: end;
 }
 
+.form-group input:focus {
+    border: 1px solid #0b0b0b; /* Estilo da borda quando em foco */
+    opacity: 0.4;
+}
+
 .botoes {
     display: flex;
     justify-content: center;
